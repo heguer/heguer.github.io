@@ -1,0 +1,268 @@
+body{
+	font-size: 15px;
+	font height: 1.5px;
+	font-family: sans-serif;
+	padding: 0;
+	margin: 0;
+	background-color: #f4f4f4;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+/* we could have tageted just the ul inside the 
+header like shown. but, this way we don have to
+ do it over and over if we want the same results
+header ul{
+	margin: 0;
+	padding: 0;
+	 by default ul's have padding, so it seems like we
+	gotta maken margin 0 padding 0 so that it works fine */
+.button_1{
+	height: 30px;
+	background: #e8491d;
+	border: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: white;
+
+
+}
+
+.container{
+	width:80%;
+	margin: auto;
+	overflow: hidden;
+	/*The overflow property controls what happens to content 
+	hat breaks outside of its bounds: 
+	imagine a div in which you've explicitly 
+	set to be 200px wide, but contains an image that 
+	is 300px wide. That image will stick out of the
+	 div and be visible by default. Whereas if you set 
+	 the overflow value to hidden, the image will cut
+	  off at 200px*/
+}
+
+.dark{
+	padding: 15px;
+	background:#35424a;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+header{
+	background: #35424a;
+	/* it seems that we dont need to say background
+	 color for headers, weird!!!, actually i checked 
+	 and it also works by just saying background*/
+	padding-top: 50px;
+	color: #ffffff; /* is the the same as white? */
+	min-height: 100px;
+	border-bottom: #e8491d 4px solid;
+}
+
+
+header a{
+	color: #ffffff; 
+	text-decoration: none;
+	text-transform:uppercase;
+	font-size: 18px;
+}
+
+
+
+
+
+header li {
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+
+}
+	
+	/*top bottom left right*/
+	/* i dont know why the li's have to float
+	 left if we will make the navbar float right*/
+
+	 
+#branding{
+	float: left;
+}
+
+
+header h1{
+	margin: 0;
+}
+
+header #navbar{
+	float: right;
+}
+
+header .highlight, header .current a {
+	color: #e8491d;
+	font-weight: bold;
+}
+
+header a:hover{
+	color: #cccccc;
+}
+
+#showcase{
+	min-height: 400px;
+	background: url(../images/image3.jpg) no-repeat;
+	text-align: center;
+	background-size:100%;
+	 
+}
+
+ #showcase h1{
+ 	margin-top: 20px;
+ 	margin-bottom: 50px;
+ 	font-size: 30px;
+ 	color: green;
+  }
+
+
+ #newsletter{
+ 	padding: 15px;
+ 	color: #ffffff;
+ 	background: #35424a;
+ }
+
+ #newsletter h1{
+ 	float: left;
+ 	font-size: 15px
+
+ }
+
+#newsletter .form{
+	float: right;
+}
+#newsletter .form-group{
+	display: inline;
+}
+
+ #newsletter input[type="email"]{
+ 	height: 15px;
+ 	padding: 4px;
+ 	width: 200px
+ }
+
+
+#boxes{
+	margin-top: 20px;
+	
+}
+
+
+ 
+
+
+ #boxes .box{
+	float: left;
+	text-align: center;
+	width: 33.3%;
+	padding:10px;
+	padding-top: 40px;
+	box-sizing: border-box;
+}
+
+#boxes .box img{
+	width: 90px;
+}
+
+
+
+aside#sidebar{
+	float: right;
+	width: 30%;
+	padding: 15px;
+	box-sizing: border-box;	
+} 
+ aside#sidebar .quote input[type="email"],aside#sidebar .quote input[type="text"], aside#sidebar .quote textarea{
+ 	width: 90%;
+ 	padding:5px;
+ }
+/* the last step could have been done by no putting the 
+buttong in a div on services. somehow if put in a div it 
+makes it part of the form for future changes to it*/
+
+
+#main #main-col{
+	float: left;
+	width: 70%;
+	margin-top: 10px;
+	box-sizing: border-box;
+}
+
+ul#services li /* which means target the ul whose class is services;
+we could have also done this by saying #main #services li; 
+which means go to main to services to li*/ {
+	list-style: none;
+	padding: 20px;
+	border: #cccccc solid  1px;
+	margin-bottom: 5px;
+	background: #e6e6e6;
+}
+
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	color: #ffffff;
+	background:#e8491d; 
+}
+
+/*media queries*/
+
+@media(max-width: 768px){
+	header #branding, header nav, header li,
+	#newsletter h1, #newsletter .form, #boxes .box,
+	#main #main-col, #main #sidebar{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	header nav a{
+		font-size: 14px;
+	}
+	header {
+		min-height: 80px;
+		padding-top: 30px;
+	}
+	#showcase h1{
+		margin-top: 40px;
+	} 
+	#newsletter input[type="email"]{
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	#newsletter input[type="submit"]{
+		width: 100%;
+	}
+
+	.quote input[type="submit"]{
+		display: block;
+		width: 100%;
+	}
+	footer {
+		border: 2px #35424a solid;
+		padding: 0 10px 0 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
